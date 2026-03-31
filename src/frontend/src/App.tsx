@@ -523,8 +523,13 @@ export default function App() {
             className="text-center mt-4"
           >
             <span
-              className="text-5xl font-extrabold tracking-[0.18em] uppercase"
-              style={{ color: colors.btnColor, transition: "color 0.3s ease" }}
+              className="font-extrabold tracking-[0.18em] uppercase"
+              style={{
+                color: colors.btnColor,
+                transition: "color 0.3s ease",
+                fontSize: "clamp(3rem, 12vw, 5.5rem)",
+                lineHeight: 1.1,
+              }}
             >
               {isDone ? "ALL DONE!" : phase === "study" ? "STUDY" : "BREAK"}
             </span>
@@ -550,11 +555,13 @@ export default function App() {
         {/* Session Counter */}
         <div data-ocid="timer.card" className="text-center">
           <span
-            className="text-3xl font-extrabold tracking-[0.12em] uppercase"
+            className="font-extrabold tracking-[0.12em] uppercase"
             style={{
               color: colors.textColor,
               opacity: 0.9,
               transition: "color 0.3s ease",
+              fontSize: "clamp(2rem, 8vw, 3.5rem)",
+              lineHeight: 1.1,
             }}
           >
             SESSION {session}/{settings.totalSessions}
